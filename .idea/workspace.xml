@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbcb44d3-843c-431e-978c-a42b404c9d43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/abstractfactory/EquipamentoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/builder/PersonagemBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/factory/ArqueiroFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/factory/ClasseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/factory/GuerreiroFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/factory/MagoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/prototype/Prototype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/CriadorPersonagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/CriadorPersonagem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/Personagem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/config/ConfiguracaoJogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv1/rpg/config/ConfiguracaoJogo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/config/PagSeguroModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/config/PaypalModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/config/StripeModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/gateway/PagSeguroGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/gateway/PagamentoGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/gateway/PaypalGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/gateway/StripeGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/sdk/pagseguro/PagSeguroSDK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/sdk/paypal/PaypalSDK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/sdk/stripe/StripeSDK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/ifpb/ads/padroes/atv2/service/PagamentoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
