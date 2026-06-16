@@ -1,5 +1,12 @@
 package br.edu.ifpb.ads.padroes.atv1.rpg;
 
+import br.edu.ifpb.ads.padroes.atv1.rpg.builder.PersonagemBuilder;
+import br.edu.ifpb.ads.padroes.atv1.rpg.abstractfactory.EquipamentoFactory;
+import br.edu.ifpb.ads.padroes.atv1.rpg.factory.ArqueiroFactory;
+import br.edu.ifpb.ads.padroes.atv1.rpg.factory.ClasseFactory;
+import br.edu.ifpb.ads.padroes.atv1.rpg.factory.GuerreiroFactory;
+import br.edu.ifpb.ads.padroes.atv1.rpg.factory.MagoFactory;
+
 public class CriadorPersonagem {
 
     public static Personagem criarPersonagem(String nome, String raca, String classe) {
@@ -8,6 +15,8 @@ public class CriadorPersonagem {
         Arma arma = null;
         Armadura armadura = null;
         String[] habilidades = null;
+
+        ClasseFactory factory = obterFactory(classe);
 
         if (raca.equals("Humano")) {
             if (classe.equals("Guerreiro")) {
@@ -114,23 +123,63 @@ public class CriadorPersonagem {
             return null;
         }
 
-        return new Personagem(nome, raca, classe, forca, inteligencia, agilidade,
-                vida, mana, arma, armadura, habilidades);
+        return new PersonagemBuilder()
+                .nome(nome)
+                .raca(raca)
+                .classe(classe)
+                .forca(forca)
+                .inteligencia(inteligencia)
+                .agilidade(agilidade)
+                .vida(vida)
+                .mana(mana)
+                .arma(arma)
+                .armadura(armadura)
+                .habilidades(habilidades)
+                .build();
     }
 
-    public static Personagem criarPersonagemEspecial(String nome, String raca, String classe) {
-        Personagem base = criarPersonagem(nome, raca, classe);
-        if (base == null) return null;
+    public static Personagem criarPersonagemEspecial(
+            String nome,
+            String raca,
+            String classe) {
 
-        if (raca.equals("Humano") && classe.equals("Guerreiro")) {
-            return new Personagem(nome + " o Lendário", raca, classe,
-                    18, 10, 12, 140, 40,
-                    new Arma("Excalibur", 35, "Espada"),
-                    new Armadura("Armadura do Rei", 30, "Pesada"),
-                    new String[]{"Investida", "Bloqueio", "Liderança"});
+        Personagem base = criarPersonagem(
+                nome,
+                raca,
+                classe
+        );
+
+        if (base == null) {
+            return null;
         }
 
-        return base;
+        Personagem especial = base.clone();
+
+        especial.setNome(
+                nome + " o Lendário"
+        );
+
+        return especial;
+    }
+
+    private static ClasseFactory obterFactory(String classe) {
+
+        switch (classe) {
+
+            case "Guerreiro":
+                return new GuerreiroFactory();
+
+            case "Mago":
+                return new MagoFactory();
+
+            case "Arqueiro":
+                return new ArqueiroFactory();
+
+            default:
+                throw new IllegalArgumentException(
+                        "Classe inválida: " + classe
+                );
+        }
     }
 
 }
